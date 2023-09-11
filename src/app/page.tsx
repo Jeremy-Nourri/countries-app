@@ -1,6 +1,6 @@
 import Countries from "@/components/Countries";
 import DropdownElement from "@/components/ui/DropdownElement";
-import fetchAllCountries from "@/services/fetchAllCountries";
+import fetchAllCountries from "@/lib/fetchCountriesAPI/fetchAllCountries";
 
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <main>
       <DropdownElement
-        Parent="Filtered by region"
+        Parent="Filtered by continent"
         li={[
           <li key="1">
             <Link href="/region/africa">

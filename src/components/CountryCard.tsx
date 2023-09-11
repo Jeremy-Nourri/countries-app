@@ -21,7 +21,7 @@ export default function CountryCard(
       />
       <div className="mt-4 flex flex-col items-center text-center">
         <h2 className="text-lg font-semibold">{name.common}</h2>
-        <p>Region : <span className="text-primary">{region}</span></p>
+        <p>Continent : <span className="text-primary">{region}</span></p>
         <p>Subregion : <span className="text-primary">{subregion}</span></p>
         <div className="card-actions mt-4">
           <button className="btn btn-primary">See more</button>
