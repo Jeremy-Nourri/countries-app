@@ -2,13 +2,13 @@ export interface Name {
   common: string;
 }
 
-export interface Flags {
+export interface Flag {
   svg: string;
 }
 
 export interface CountryHomePage {
   name: Name;
-  flags: Flags;
+  flags: Flag;
   region: string;
   subregion: string;
 }

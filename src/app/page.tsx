@@ -1,6 +1,8 @@
-import CountryCard from "@/components/CountryCard";
+import Countries from "@/components/Countries";
 import DropdownElement from "@/components/ui/DropdownElement";
 import fetchAllCountries from "@/services/fetchAllCountries";
+
+import Link from "next/link";
 
 export default async function Home() {
 
@@ -9,29 +11,42 @@ export default async function Home() {
   return (
     <main>
       <DropdownElement
-        Parent="Filter by region"
+        Parent="Filtered by region"
         li={[
-          <li key="1">Africa</li>,
-          <li key="2">Americas</li>,
-          <li key="3">Asia</li>,
-          <li key="4">Europe</li>,
-          <li key="5">Oceania</li>,
+          <li key="1">
+            <Link href="/region/africa">
+              Africa
+            </Link>
+          </li>,
+          <li key="2">
+            <Link href="/region/americas">
+              Americas
+            </Link>
+          </li>,
+          <li key="3">
+            <Link href="/region/asia">
+              Asia
+            </Link>
+          </li>,
+          <li key="4">
+            <Link href="/region/europe">
+              Europe
+            </Link>
+          </li>,
+          <li key="5">
+            <Link href="/region/oceania">
+              Oceania
+            </Link>
+          </li>,
         ]}
       />
+
       <div className="flex flex-wrap justify-around items-center">
-        {countriesData.map((country, index) => (
-
-          <CountryCard
-            key={index} 
-            name={country.name}
-            flags={country.flags}
-            region={country.region}
-            subregion={country.subregion}
-          />
-
-        ))}
-
+        <Countries countries={countriesData} />
       </div>
     </main>
+
   )
 }
+
+    

@@ -24,7 +24,7 @@ export default function CountryCard(
         <p>Region : <span className="text-primary">{region}</span></p>
         <p>Subregion : <span className="text-primary">{subregion}</span></p>
         <div className="card-actions mt-4">
-          <button className="btn btn-primary">See</button>
+          <button className="btn btn-primary">See more</button>
         </div>
       </div>
     </div>
