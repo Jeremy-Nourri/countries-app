@@ -1,9 +1,9 @@
-import NavBar from "../NavBar"
+import NavBar from "./NavBar"
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center p-4">
-      <h1 className="text-2xl font-bold">Where in the world?</h1>
+    <header className="flex flex-col justify-evenly items-center ">
+      <h1 className="py-4 text-lg font-bold">Where in the world?</h1>
       <NavBar />      
     </header>
   )

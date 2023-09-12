@@ -1,7 +1,6 @@
-import { CountryHomePage } from "@/types/CountryHomePage"
-import CountryCard from "./CountryCard"
+import { ShortPresentation } from "@/types/ShortPresentation";import CountryCard from "./CountryCard"
 
-export default function CountriesOrderByName ({ countries }: { countries: CountryHomePage[] }) {
+export default function CountriesOrderByName ({ countries }: { countries: ShortPresentation[] }) {
   
   const countriesSortedByName = countries.sort((a, b) => {
     if (a.name.common > b.name.common) {

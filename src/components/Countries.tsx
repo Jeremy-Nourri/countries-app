@@ -1,7 +1,7 @@
-import { CountryHomePage } from "@/types/CountryHomePage"
+import { ShortPresentation } from "@/types/ShortPresentation";
 import CountryCard from "./CountryCard"
 
-export default function Countries ({ countries }: { countries: CountryHomePage[] }) {
+export default function Countries ({ countries }: { countries: ShortPresentation[] }) {
   return (
     <>
       {countries.map((country, index) => (

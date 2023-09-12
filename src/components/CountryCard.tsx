@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { CountryHomePage } from "@/types/CountryHomePage"
+import { ShortPresentation } from "@/types/ShortPresentation";
 
 export default function CountryCard(
   {
@@ -7,7 +7,7 @@ export default function CountryCard(
     flags,
     region,
     subregion,
-  }: CountryHomePage) {
+  }: ShortPresentation) {
 
   return (
     <div className="w-4/5 my-4 flex flex-col justify-center items-center p-10 rounded-lg shadow-lg bg-gray-100">
