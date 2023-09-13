@@ -1,4 +1,4 @@
-import { ShortPresentation } from "@/types/ShortPresentation";import CountryCard from "./CountryCard"
+import { ShortPresentation } from "@/types/ShortPresentation";import CountryCard from "./CountryShortCard"
 
 export default function CountriesOrderByName ({ countries }: { countries: ShortPresentation[] }) {
   

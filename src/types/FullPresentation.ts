@@ -1,11 +1,11 @@
 import { ShortPresentation } from './ShortPresentation';
 
 export interface FullPresentation extends ShortPresentation {
-  capital: string;
+  capital: string[];
   currencies: {
     [key: string]: {
       name: string;
-      symbol?: string;
+      symbol: string;
     };
   };
   languages: {
@@ -13,7 +13,8 @@ export interface FullPresentation extends ShortPresentation {
   };
   population: number;
   independent: boolean;
-  status: string;
   unMember: boolean;
+  maps: {
+    openStreetMaps: string;
+  };
 }
-

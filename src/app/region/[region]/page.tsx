@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 import fetchCountriesByRegion from "@/lib/fetchCountriesAPI/fetchCountriesByRegion"
-import CountryCard from "@/components/CountryCard"
+import CountryShortCard from "@/components/CountryShortCard"
 import DropdownElement from "@/components/ui/DropdownElement"
 
 export default async function Region({ params }: { params: { region: string } }) {
@@ -10,22 +10,15 @@ export default async function Region({ params }: { params: { region: string } })
 
   const countriesByRegion = await fetchCountriesByRegion(region)
 
-  const filteredBySubregion = () => {
-    const subregions = countriesByRegion.map(country => country.subregion)
-    const listOfSubregions = [...new Set(subregions)]
-    return listOfSubregions
-  }
-    
-  const Subregions = filteredBySubregion()
+  const subregions = [...new Set(countriesByRegion.map(country => country.subregion))]
 
- 
 
   return (
     <main className="flex flex-col items-center">
 
       <DropdownElement
         Parent="Filtered by subregion"
-        li={Subregions.map((subregion, index) => (
+        li={subregions.map((subregion, index) => (
           <li key={index}>
             <Link href={`/region/${region}/${subregion}`}>
               {subregion}
@@ -34,11 +27,13 @@ export default async function Region({ params }: { params: { region: string } })
         ))}
       />
 
-      <h2 className="w-4/5 py-3 rounded-md uppercase bg-secondary text-white text-lg font-bold text-center" >{region}</h2>
+      <h2 className="w-4/5 py-3 rounded-md uppercase bg-secondary text-white text-lg font-bold text-center" >
+        {region}
+      </h2>
       <div className="flex flex-wrap justify-around">
 
         {countriesByRegion.map((country, index) => (
-          <CountryCard
+          <CountryShortCard
             key={index}
             name={country.name}
             flags={country.flags}

@@ -1,7 +1,8 @@
 import Image from "next/image"
+import Link from "next/link";
 import { ShortPresentation } from "@/types/ShortPresentation";
 
-export default function CountryCard(
+export default function CountryShortCard(
   {
     name,
     flags,
@@ -24,7 +25,9 @@ export default function CountryCard(
         <p>Continent : <span className="text-primary">{region}</span></p>
         <p>Subregion : <span className="text-primary">{subregion}</span></p>
         <div className="card-actions mt-4">
-          <button className="btn btn-primary">See more</button>
+          <Link href={`/${name.common}`}>
+            <button className="btn btn-primary">More details</button>
+          </Link>
         </div>
       </div>
     </div>

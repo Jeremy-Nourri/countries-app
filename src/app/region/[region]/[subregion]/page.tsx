@@ -1,5 +1,5 @@
 import fetchCountriesByRegion from "@/lib/fetchCountriesAPI/fetchCountriesByRegion"
-import CountryCard from "@/components/CountryCard"
+import CountryShortCard from "@/components/CountryShortCard"
 
 export default async function SubRegion({ params }: { params: { region: string, subregion: string } }) {
 
@@ -18,7 +18,7 @@ export default async function SubRegion({ params }: { params: { region: string, 
       <div className="flex flex-wrap justify-around">
   
         {countriesBySubregion.map((country, index) => (
-          <CountryCard
+          <CountryShortCard
             key={index}
             name={country.name}
             flags={country.flags}
