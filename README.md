@@ -1,3 +1,12 @@
+# News from the world
+
+It is an application to read news and information, and better understand the world and stay informed.
+
+API :
+NewsCatcher https://newscatcherapi.com/.
+Rest Countries https://restcountries.com/
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
